@@ -47,4 +47,4 @@ jobs:
     
     - name: Deploy FastAPI App
       run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@54.236.199.68 "cd BenchFastAPI/ && git pull && source venv/bin/activate && pip install -r requirements.txt && uvicorn main:app --host 0.0.0.0 --port 8000"
+          ssh -o StrictHostKeyChecking=no ubuntu@54.236.199.68 "cd BenchFastAPI/ && git pull && source venv/bin/activate && pip install -r requirements.txt && sudo systemctl restart fastapi"
