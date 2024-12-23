@@ -32,17 +32,17 @@ jobs:
       run: |
         pytest tests/
 
-  # Deploy to Cloud (For example, using a simple server deployment)
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build  # This means deploy will run after the build job
+  # # Deploy to Cloud (For example, using a simple server deployment)
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build  # This means deploy will run after the build job
 
-    steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
+  #   steps:
+  #   - name: Check out repository
+  #     uses: actions/checkout@v2
 
-    - name: Upload to cloud server
-      run: |
-        # Example deployment to a cloud server (for instance, AWS, DigitalOcean, or a VPS)
-        ssh -i /path/to/your/private-key user@your-server-ip "cd /path/to/app && git pull && source venv/bin/activate && pip install -r requirements.txt && systemctl restart fastapi-app.service"
+  #   - name: Upload to cloud server
+  #     run: |
+  #       # Example deployment to a cloud server (for instance, AWS, DigitalOcean, or a VPS)
+  #       ssh -i /path/to/your/private-key user@your-server-ip "cd /path/to/app && git pull && source venv/bin/activate && pip install -r requirements.txt && systemctl restart fastapi-app.service"
 
