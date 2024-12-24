@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello Only"}
+    return {"message": "One FastAPI REST API"}
